@@ -99,17 +99,17 @@ import {
 //=== Rawmaterial
 import {
     RawMaterialCarousel
-} from '@site/src/components/carousels/ppr/rawmaterial-carousel';
+} from '@site/src/components/Carousels/ppr/rawmaterial-carousel';
 
 
 //=== PPR Print
 import {
     PprPrintCarousel
-} from '@site/src/components/carousels/ppr/pprprint-carousels';
+} from '@site/src/components/Carousels/ppr/pprprint-carousels';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faFolder, faFolderOpen, faEnvelope, faClipboard, faSquareE, faPlus } from '@fortawesome/pro-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core'; 
+import { FontAwesomeIcon } from '@fortawesome/fontawesome-pro'; 
+//import { faFolder, faFolderOpen, faEnvelope, faClipboard, faSquareE, faPlus } from '@fortawesome/fontawesome-pro';
+//import { library } from '@fortawesome/fontawesome-pro'; 
 
 /* import { fab } from '@fortawesome/free-brands-svg-icons';  
 import { fas } from '@fortawesome/pro-solid-svg-icons'; 
@@ -121,10 +121,10 @@ import { fasl } from '@fortawesome/sharp-light-svg-icons';
 import { fasr } from '@fortawesome/sharp-regular-svg-icons'; 
 import { fass } from '@fortawesome/sharp-solid-svg-icons';  */
 
-library.add(
+//library.add(
     //fab, fas, fal, fad, far, fat, fasl, fasr, fass
-    faFolder, faFolderOpen, faEnvelope, faClipboard, faSquareE, faPlus
-); 
+    //faFolder, faFolderOpen, faEnvelope, faClipboard, faSquareE, faPlus
+//); 
 
 
 
