@@ -1,0 +1,75 @@
+.loss-ul {
+    list-style-type: none;
+}
+
+.tree-container{
+    background-color: var(--ifm-background-color-container);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: var(--ifm-background-container-box-shadow);
+}
+
+.tree-container > div {
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    padding: 2px;
+}
+
+.tree-container > div:has(> .collapsed-list):hover,
+.loss-ul> li > div > div:has(> .collapsed-list):hover,
+.loss-ul> li > div > div > div:has(> input):hover {
+    background-color: lightgray;
+}
+
+.id-container-header {
+    margin-top: 50px;
+}
+
+.id-buttons {
+    float: right;
+    margin-left: 10px;
+    background-color: var(--ifm-custom-button-color);
+    box-shadow: var(--ifm-background-container-box-shadow);
+}
+
+.id-container-numbers {    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--ifm-background-color-container);
+    box-shadow: var(--ifm-background-container-box-shadow);
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+
+    /* Position the tooltip */
+    position: absolute;
+    bottom:35px;
+    left: -60px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

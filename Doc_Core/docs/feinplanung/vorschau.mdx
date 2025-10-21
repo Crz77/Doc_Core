@@ -1,0 +1,53 @@
+---
+sidebar_position: 4 
+title: "Vorschau"
+---
+
+## Allgemein
+<div className="background-container">
+Die Vorschau zeigt die verplanten Stunden für einen Bereich. 
+Es kann zwischen Auftrags- und Personalstunden umgeschaltet werden. Sprich, wie viel Stunden ist die Maschine/der Arbeitsplatz verplant
+und wie viele Personalstunden werden dafür benötigt.<br/>
+Zudem können die geplanten Aufträge pro Maschine und Woche angezeigt werden.
+</div>
+<br/>
+
+<div className="background-container">
+    <PreviewGeneralCarousel/>
+<br/>
+
+:::danger ACHTUNG
+Es werden immer nur die Daten der ausgewählten Workcenter angezeigt. Solltet ihr 
+etwa nur 8/10 Maschinen ausgewählt haben, werden euch auch nur die Daten (auch die Gesamt-Wochenstunden) von 8 Maschinen angezeigt.
+:::    
+</div>
+
+
+## Stunden
+<div className="background-container">
+Die Ansicht Stunden zeigt, wie viele Stunden ein Arbeitsplatz/eine Maschine verplant ist. 
+Die einzelnen Kacheln zeigen die Planungsstunden pro Maschine/Woche. 
+Unten wird die Gesamtstundenanzahl angezeigt, wie viele Stunden der ganze Bereich in einer KW
+verplant ist.
+</div>
+<br/>
+
+<div className="background-container">
+    <PreviewHoursCarousel/>
+</div>
+
+
+## Personal
+
+<div className="background-container">
+Die Ansicht Personal zeigt die Anzahl an theoretisch benötigtem Personal, welches in den Kalenderwochen
+an den bestimmten Arbeitsplätzen benötigt wird. 
+Natürlich ist klar, dass auf einer Maschine nicht 0.7 Personen arbeiten können. 
+Die Ansicht soll als Unterstützung für Vorarbeiter dienen, um eine grobe Übersicht zu erhalten, wie viele Personen
+sie ungefähr in welcher Woche benötigen.
+</div>
+<br/>
+
+<div className="background-container">
+    <PreviewStaffCarousel/>
+</div>

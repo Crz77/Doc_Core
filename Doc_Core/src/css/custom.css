@@ -1,0 +1,156 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #0066cc;
+    --ifm-color-primary-dark: #0059B3  ;
+    --ifm-color-primary-darker: #004D99;
+    --ifm-color-primary-darkest: #004080;
+    --ifm-color-primary-light: #2079D2;
+    --ifm-color-primary-lighter: #408CD9;
+    --ifm-color-primary-lightest: #609FDF;
+    --ifm-border-color-images: #deecf8;
+    --ifm-background-color-container: #F1F2F4;
+    --ifm-hover-background-color: #B9BABF;
+    --ifm-custom-button-color: #E9EAED;
+    --ifm-background-container-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    --ifm-element-inside-background-container-color: #E9EAED;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-sidebar-ul-background-color: #F6F6F6;
+    --ifm-sidebar-box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.1) -3px -3px 6px 1px inset;
+  }
+  
+  /* For readability concerns, you should choose a lighter palette in dark mode. */
+  [data-theme='dark'] {
+    --ifm-color-primary: #80B3E6;
+    --ifm-color-primary-dark: #2079D2;
+    --ifm-color-primary-darker: #408CD9;
+    --ifm-color-primary-darkest: #609FDF;
+    --ifm-color-primary-light: #80B3E6;
+    --ifm-color-primary-lighter: #9FC6EC;
+    --ifm-color-primary-lightest: #BFD9F2;
+    --ifm-border-color-images: #deecf8;
+    --ifm-background-color-container: #242527;
+    --ifm-hover-background-color: #121314;
+    --ifm-custom-button-color: #E9EAED;
+    --ifm-background-container-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    --ifm-element-inside-background-container-color: #2B2B2C;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-sidebar-ul-background-color: #232324;
+    --ifm-sidebar-box-shadow:  rgba(0, 0, 0, 0.8) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.3) -3px -3px 6px 1px inset;
+  
+  }
+  
+  [data-theme='light'] .border-image {
+    border: solid;
+    border-color: #deecf8;
+    border-width: thin;
+    margin-bottom: 20px;
+  }
+  
+  /* disable margin on bottom of text blocks */
+  p { 
+      margin-bottom: 0;
+  }
+  
+  .background-container {
+      background-color: var(--ifm-background-color-container);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: var(--ifm-background-container-box-shadow);
+  }
+
+  .image-background-container {
+    background-color: var(--ifm-background-color-container);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: var(--ifm-background-container-box-shadow);
+  }
+
+  .unique-tabs .tabs__item--active{
+      background-color: var(--ifm-element-inside-background-container-color);
+      box-shadow: var(--ifm-background-container-box-shadow);
+  }
+  
+  .collo-card {
+    height: 610px;
+    margin-bottom: 35px;
+    background-color: var(--ifm-element-inside-background-container-color);
+    box-shadow: var(--ifm-background-container-box-shadow);
+  }
+  
+  .collo-button-div {
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+  
+  .collo-button {
+    border: solid thin;
+  }
+  
+  .inline-text-button {
+      pointer-events: none;
+      margin-left: 5px;
+      margin-right: 5px;
+      border: solid black thin;
+  }
+  
+  .inline-text-color-button {
+      pointer-events: none;
+      margin-left: 5px;
+      margin-right: 5px;
+      color: white;
+  }
+  
+  
+  
+  .double-button-left {
+    pointer-events: none;
+    width: 20px;
+    padding-left: 10px;
+    border-color: lightgray;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+  }
+  
+  .double-button-right {
+    pointer-events: none;
+    color: white;
+    width: 20px;
+    padding-left: 8px;
+    padding-right: 22px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  } 
+  
+  .small-check-button {
+    color: white;
+    width: 1.5vw;
+    height: 2.5vh;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: black thin;
+    min-width: 25px;
+    min-height: 25px;
+  }
+  
+  
+  .theme-doc-sidebar-item-category-level-2 .menu__list {
+      background-color: var(--ifm-sidebar-ul-background-color);
+      padding:0;
+      margin-left: 13px;
+      margin-right: 5px;
+      margin-bottom: 15px;
+      margin-top: 6px;
+      border-radius: 0.25rem;
+      box-shadow: var(--ifm-sidebar-box-shadow)
+  }
+  
+  

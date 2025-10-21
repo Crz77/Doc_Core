@@ -1,0 +1,186 @@
+---
+sidebar_position: 6
+title: Rückmeldung mit Collo
+description: ""
+---
+
+<!-- Imports for images-->
+import mes_collo from '../../../../static/img/fertigung/rückmeldung/rückmeldung-mit-collo/MES_Collo.png';
+import wms_collo from '../../../../static/img/fertigung/rückmeldung/rückmeldung-mit-collo/WMS_Collo.png';
+
+
+<div className="background-container">
+
+Die Mengenerfassung mit Etikett (Collo) wird meistens in Bereichen eingesetzt, welche auf Gebindeebene abstellen. Hier funktioniert alles genau wie bei der normalen Mengenerfassung, wir können also Gutmenge, Nacharbeit und Ausschuss erfassen, zusätzlich wird für jedes abgestellte Gebinde ein Collo gedruckt, welches die Auftragsdaten enthält und am Gebinde angebracht wird.
+Hier wird zwischen **MES** und **WMS** Collo unterschieden.
+
+<div className="container">
+    <div className="row">
+        <div className="col col--6">
+            <div className="col-demo">
+                <div className="card-demo">
+                    <div className="card border-image collo-card">
+                        <div className="card__image">
+                            <Image img={mes_collo}/>
+                        </div> 
+                        <div className="card__body">
+                            <h3>MES Collo</h3>
+                            <small>
+                               Das MES Collo ist grundsätzlich nur für die Deklaration von Gebinde geeignet. Es enthält alle Auftragsdaten wie abgestellte Stückzahl, Typenbezeichnung, Abstelldatum und Zeit, Channel, Auftragsnummer, Operationsbezeichnung und eine Nummerierung. Durch scannen des Barcodes können die Auftragsdaten ausgelesen werden und es kann z.B. nachgesehen werden, was der aktuelle Bearbeitungsstand ist. Es befindet sich allerdings nicht im Warehouse-Management-System und Staplerfahrer*in oder FTS können nicht damit arbeiten.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="col col--6">
+            <div className="col-demo">
+                <div className="card-demo">
+                    <div className="card border-image collo-card">
+                        <div className="card__image">
+                            <Image img={wms_collo}/>
+                        </div>
+                        <div className="card__body">
+                            <h3>WMS Collo</h3>
+                            <small>
+                                Das WMS Collo ist genau gleich wie das MES Collo, es enthält alle Auftragsdaten die ausgelesen werden können,
+                                der einzige Unterschied is hier, dass es sich zusätzlich im Warehouse-Management-System 
+                                befindet und Staplerfahrer*innen und FTS können damit arbeiten.
+                                Das heißt, wenn das Gebinde im Regal steht, kann es vom FTS oder Stapler gescannt und abgeholt werden.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+:::info Collo individuell anpassen
+
+*Die Auftragsdaten, welche das Collo enthält können beim MES sowie beim WMS Collo individuell an die Bedürfnisse des jeweiligen Bereiches angepasst werden.
+Solltet ihr eine Anpassung benötigen, könnt ihr euch jederzeit bei uns melden.*
+
+:::  
+
+</div>
+
+
+### Neue Rückmeldung ohne Verluste
+
+<div className="background-container">
+    Bei dieser Art der Rückmeldung werden nur die Arbeitszeit, das Datum und die produzierte Stückzahl erfasst. 
+    Die Maske, welche dir angezeigt wird, kann allerdings aus einer beliebigen Kombination aus Zeit, Datum und Stückzahl bestehen, 
+    abhängig vom jeweiligen Bereich.
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloFeedbackNoLossCarousel/>
+</div>
+
+
+### Neue Rückmeldung mit Verlusten
+
+<div className="background-container">
+Bei dieser Art der Rückmeldung wird ebenfalls die Arbeitszeit, das Datum die produzierte Stückzahl erfasst. Weiters kommt nun auch die
+Verlusterfassung hinzu.
+Verlusterfassung bedeutet hier, dass im System eine bestimmte Zeit für den Auftrag hinterlegt ist. Wird diese Zeit nicht erreicht, 
+müssen die Gründe für das nicht Erreichen angegeben werden, wie etwa mangelnde Qualität beim Material, Werkzeugbruch, usw. 
+
+Die Maske, welche dir angezeigt wird, kann allerdings aus einer beliebigen Kombination aus Zeit, Datum und Stückzahl bestehen, 
+abhängig vom jeweiligen Bereich.
+<br/>
+Zusätzlich gibt es noch die drei Optionen, die Rückmeldung ohne Rüsten, mit Rüsten in vorgegebener Zeit 
+oder mit Rüsten außerhalb der vorgegebenen Zeit einzutragen. <br/>
+Wähle bitte zutreffendes aus:
+</div>
+<br/>
+
+<div className="background-container">
+    <Tabs className="unique-tabs">
+        <TabItem value="ohne Rüsten">
+            <ColloFeedbackLossNoEquipCarousel/>
+        </TabItem>
+        <TabItem value="mit Rüsten innerhalb Standardzeit">
+            <ColloFeedbackLossEquipInTimeCarousel/>
+        </TabItem>
+        <TabItem value="mit Rüsten außerhalb Standardzeit">
+            <ColloFeedbackLossEquipNotInTimeCarousel/>
+        </TabItem>
+    </Tabs>
+</div>
+
+
+### Teilmenge abstellen
+<div className="background-container">
+    Manchmal erfordert es die Situation, dass der Auftrag aus irgend einem Grund unterbrochen werden muss, beim Schichtwechsel zum Beispiel. Damit jeder weiß, wie 
+    viele Stücke bereits fertig gestellt sind, gibt es die Möglichkeit eine Teilmenge abzustellen, ohne das Collo drucken zu müssen.
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloSubsetCarousel/>
+</div>
+
+
+### Collo erstellen ohne Drucken
+<div className="background-container">
+    Es gibt die Möglichkeit ein Collo erstmal anzulegen, ohne eine Menge einzutragen oder es zu drucken. 
+    Diese Option wird allerdings nur in sehr wenigen Bereichen verwendet, im Regelfall wird das Collo beim Abstellen des Gebindes erstellt und gedruckt.
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloCreateCarousel/>
+</div>
+
+
+### Collo Menge ändern
+<div className="background-container">
+    Es ist möglich, die Menge eine Collos nachträglich zu ändern. Dies geht allerdings nur beim letzten Eintrag, 
+    da es andernfalls wieder zu einem Datenschiefstand kommen würde.
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloChangeQuantityCarousel/>
+</div>
+
+
+### Collo erneut drucken
+<div className="background-container">
+    Es besteht die Möglichkeit ein Collo jederzeit neu zu drucken.
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloReprintCarousel/>
+</div>
+
+
+### Collo löschen
+<div className="background-container">
+    Collos können immer nur an dem Tag gelöscht werden, an dem sie erstellt wurden und auch nur dann, wenn das Gebinde noch nicht abgeholt wurde.
+    Das heißt, wenn das Gebinde vom FTS oder Staplerfahrer eingecheckt und abgeholt wurde, kann es nicht mehr gelöscht werden. 
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloDeleteCarousel/>
+</div>
+
+
+### Rückmeldung löschen
+<div className="background-container">
+    Bevor eine Rückmeldung bei der Mengenerfassung mit Collo gelöscht werden kann, müssen zuvor alle Collos gelöscht werden.
+    Dafür gilt ebenso, dass Collos immer nur an dem Tag gelöscht werden können, andem sie erstellt wurden und das auch nur dann, wenn das Gebinde noch nicht abgeholt wurde.
+</div>
+<br/>
+
+<div className="background-container">
+    <ColloDeleteFeedbackCarousel/>
+</div>
+
+

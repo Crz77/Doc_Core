@@ -1,0 +1,91 @@
+---
+sidebar_position: 4
+title: Verluste
+description: ""
+---
+
+<div className="background-container">
+
+Als Verluste werden die Gründe bezeichnet, welche das Erreichen der geplanten Bearbeitungszeit verhindern oder welche das Abstellen der Maschine oder des Channels erfordern. 
+Diese unterteilen sich in drei Kategorien:
+
+- Vereinbarte Verluste
+- Geplante Verluste
+- Ungeplante Verluste
+
+</div>
+
+
+### Vereinbarte Verluste 
+
+<div className="background-container">
+    Unter vereinbarte Verluste fallen Dinge wie Sonderaufträge von Kunden, gezieltes Abstellen des Channels z.B. wegen der Reinigung, Schulungen oder Versammlungen für die Mitarbeiter*innen.
+    Also alle Gründe welche mit dem Unternehmen vereinbart wurden, um die Produktion für einen bestimmten Zeitraum, zu unterbrechen. <br/><br/>
+
+<AgreedLossesCarousel/>
+</div>
+
+
+### Geplante Verluste 
+
+<div className="background-container">
+    Unter geplante Verluste fallen Prozesse in denen nichts produziert wird, die aber vom Channelplaner berücksichtigt werden, wie z.B. das Rüsten. Eine Maschine muss gerüstet werden, ansonsten sieht es mit den verschiedenen Typen- und Produktvariationen relativ düster aus. Während der Rüstzeit steht allerdings die Maschine und es wird nichts produziert, was wir verkaufen können, ergo haben wir hier einen Verlust. Da es ohne diesen Verlust aber nicht läuft, ist es ein geplanter Verlust.
+</div>
+
+
+### Ungeplante Verluste 
+
+<div className="background-container">
+    Unter ungeplante Verluste fallen alle Prozesse, welche vom Channelplaner nicht berücksichtig werden. Diese Kategorie umfasst also alle Komplikationen, die während einer Auftragsbearbeitung auftreten und verhindern, die geplante Bearbeitungszeit zu erreichen. Das können elektrische oder mechanische Probleme sein, Dinge wie das nochmalige Rüsten, Anpassungen am Werkzeug oder das nicht Erreichen der Zykluszeit aufgrund der Qualität. Es fallen aber auch administrative Tätigkeiten oder das Business Excellence Meeting darunter, da auch diese Prozesse vom Planer nicht berücksichtigt werden.
+</div>
+
+
+### Verluste im MES
+
+<div className="background-container">
+
+Je nach Konfiguration der Maschine im MES, müssen bei der Rückmeldung Verluste angegeben werden. Für jeden Auftrag ist im System eine gewisse Bearbeitungszeit hinterlegt. Wenn wir jetzt einen Auftrag rückmelden und die Zeit eingeben, in der wir an diesem Auftrag gearbeitet haben, berechnet das System automatisch, wie viel Stück wir in dieser Zeit produzieren hätten können. Wird diese Zeit nicht erreicht, müssen die Gründe angegeben werden, welche das Erreichen der Bearbeitungszeit verhindert haben.
+Zusätzlich müssen noch geplante Verluste wie das Rüsten oder das Wechseln der Schleifscheibe eingetragen werden.
+Die Bearbeitungszeit setzt sich aus folgenden Komponenten zusammen:
+
+
+:::tip Bearbeitungszeit
+
+Bearbeitungszeit = Zykluszeit * Stückzahl + Rüstzeit
+
+Die Rüstzeit wird allerdings nur einmal pro Auftrag gerechnet.
+Ist die Maschine bereits gerüstet setzt sich die Bearbeitungszeit nur aus *Zykluszeit* * *Stückzahl* zusammen.
+
+:::
+
+
+:::tip Pause und Verteilzeit
+
+Uns stehen pro Arbeitstag 10 Minuten Pause und 20 Minuten persönliche Verteilzeit zu.
+
+Das System rechnet die persönliche Verteilzeit automatisch mit ein und teilt diese stündlich auf die Auftragsbearbeitung auf.
+Das heißt, pro Stunde was wir an einem Auftrag arbeiten, zieht das System 2.5 Minuten persönliche Verteilzeit von der Bearbeitungszeit ab. Wenn wir z.B. 5h und 30 Minuten an einem Auftrag arbeiten, wird die aliquote Verteilzeit der 30 Minuten natürlich auch von der Bearbeitungszeit abgezogen.
+
+Zusätzlich können wir pro Tag 10 Minuten Pause eintragen, die von der Bearbeitungszeit abgezogen werden.
+
+:::
+</div>
+
+
+### Verlustkatalog
+
+<div className="background-container">
+
+Im Verlustkatalog sind alle Verluste enthalten, welche gesamt, auf allen Channels verfügbar sind.
+Klicke auf die einzelnen Baumelemente, um diese auszuklappen und die Verluste einzusehen.
+
+Wenn du den Verlustkatalog für eine Maschine anpassen möchtest,
+wähle die gewünschten Verluste aus und klicke anschließend in der Box Verlust ID's auf den <button className="button button--sm button--secondary inline-text-button"> <FontAwesomeIcon icon="fa-envelope" size="lg" /></button> Button.
+
+<span>Nun öffnet sich dein Mailprogramm mit einem vorgefertigem Text und den ausgewählten ID's.
+Du musst nur noch Channel und Maschine einsetzen, auf Senden klicken und sobald die Mail bei uns eingetroffen ist, passen wir die Verluste auf dem jeweiligen Arbeitsplatz an und senden dir eine Mail, wenn wir damit fertig sind. </span>
+</div>
+
+
+<LossTree/>
+

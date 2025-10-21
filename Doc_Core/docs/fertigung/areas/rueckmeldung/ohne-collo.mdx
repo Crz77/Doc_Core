@@ -1,0 +1,69 @@
+---
+sidebar_position: 5
+title: Rückmeldung ohne Collo
+description: ""
+---
+
+<div className="background-container">
+Die Rückmeldung ohne Collo ist die gängigste Art der Rückmeldung. Hier werden die Arbeitszeit, das Datum und die produzierte Stückzahl erfasst.
+Die Maske kann je nach Mengenerfassung etwas anders aussehen.
+</div>
+
+
+### Neue Rückmeldung ohne Verluste
+
+<div className="background-container">
+Bei dieser Art der Rückmeldung wird die Arbeitszeit, das Datum und die produzierte Stückzahl erfasst.
+Die Maske, welche dir angezeigt wird, kann allerdings aus einer beliebigen Kombination aus Zeit, Datum und Stückzahl bestehen, 
+abhängig vom jeweiligen Bereich. 
+</div>
+
+<br/>
+
+<div className="background-container">
+    <FeedbackNoLossCarousel/>
+</div>
+
+
+### Neue Rückmeldung mit Verlusten
+<div className="background-container">
+Bei dieser Art der Rückmeldung wird ebenfalls die Arbeitszeit, das Datum die produzierte Stückzahl erfasst. Weiters kommt nun auch die
+Verlusterfassung hinzu.
+Verlusterfassung bedeutet hier, dass im System eine bestimmte Zeit für den Auftrag hinterlegt ist. Wird diese Zeit nicht erreicht, 
+müssen die Gründe für das nicht Erreichen angegeben werden, wie etwa mangelnde Qualität beim Material, Werkzeugbruch, usw. 
+
+Die Maske, welche dir angezeigt wird, kann allerdings aus einer beliebigen Kombination aus Zeit, Datum und Stückzahl bestehen, 
+abhängig vom jeweiligen Bereich.
+<br/>
+Zusätzlich gibt es noch die drei Optionen, die Rückmeldung ohne Rüsten, mit Rüsten in vorgegebener Zeit 
+oder mit Rüsten außerhalb der vorgegebenen Zeit einzutragen. <br/>
+Wähle bitte zutreffendes aus:
+</div>
+<br/>
+
+<div className="background-container">
+    <Tabs className="unique-tabs">
+        <TabItem value="ohne Rüsten">
+            <FeedbackLossNoEquipCarousel/>
+        </TabItem>
+        <TabItem value="mit Rüsten innerhalb Standardzeit">
+            <FeedbackLossEquipInTimeCarousel/>
+        </TabItem>
+        <TabItem value="mit Rüsten außerhalb Standardzeit">
+            <FeedbackLossEquipNotInTimeCarousel/>
+        </TabItem>
+    </Tabs>
+</div>
+
+
+### Rückmeldung löschen
+
+<div className="background-container">
+    Es kann immer nur die letzte Rückmeldung eines Auftrages gelöscht werden.  Das hat den Grund, dass, wenn ein Auftrag mehrere Rückmeldungen hat und bei einer Rückmeldung die Stückzahl gelöscht wird, kommt es zu einem Datenschiefstand und am Ende kann nicht mehr nachvollzogen werden, wer wie viele Stück gefertigt hat.
+</div>
+<br/>
+
+<div className="background-container">
+    <DeleteFeedbackCarousel/>
+</div>
+

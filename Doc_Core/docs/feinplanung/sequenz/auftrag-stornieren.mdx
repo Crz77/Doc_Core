@@ -1,0 +1,88 @@
+---
+sidebar_position: 5
+title: "Auftrag stornieren"
+description: ""
+---
+
+## Allgemein
+<div className="background-container">
+Die Feinplanung bietet die Möglichkeit einen Auftrag komplett zu stornieren.
+Dies kann nötig sein, wenn etwa Ausschussersatz angefordert werden muss. 
+Der alte Auftrag, welcher ersetzt wird, muss schließlich aus dem System gelöscht werden um dieses sauber zu halten.<br/><br/>
+Wenn ein Auftrag beispielsweise bei der Operation Planschleifen storniert wird, 
+wird er auch für alle Folgeoperationen storniert, sprich LFB-Schleifen, Finishen usw. 
+Im Stornobereich bleibt er solange liegen, bis er vom Planer gelöscht wird
+oder die Material Family abgeschlossen ist.<br/><br/>
+
+:::caution Achtung
+Um einen Auftrag zu stornieren müssen drei Eigenschaften gegeben sein:
+
+1. Der Auftrag muss im Planungspool (unterer Pool) liegen
+2. Es dürfen keine Stücke eingetragen sein
+3. Es darf weder Werkzeug noch Messmittel angefordert sein
+:::
+
+</div>
+<br/>
+
+
+## Auftrag in Planungspool verschieben
+<div className="background-container">
+    Wenn ein bereits feinverplanter Auftrag storniert werden soll, muss er zuvor in den Planungspool verschoben werden.<br/>
+    Erst dann kann er storniert werden.
+</div>
+<br/>
+
+<div className="background-container">
+    <MoveToPlanningpoolCarousel/>
+</div>
+<br/>
+
+
+## Auftrag bei eingetragener Stückzahl stornieren
+<div className="background-container">
+    Wenn ein Auftrag storniert werden soll, bei dem schon eine Stückzahl eingetragen wurde, müssen zuvor die jeweiligen Rückmeldungen gelöscht
+    werden, bevor dieser in den Planungspool verschoben und storniert werden kann.
+</div>
+<br/>
+
+<div className="background-container">
+    <CancellationWithQuantityCarousel/>
+</div>
+<br/>
+
+
+## Auftrag bei Werkzeug/Messmittel-Anforderung stornieren
+<div className="background-container">
+    Wenn ein Auftrag storniert werden soll, Werkzeug und/oder Messmittel allerdings bereits ausgeschrieben sind, müssen
+    diese zuvor storniert werden. 
+    Danach muss das Magazin die Stornierung bestätigen, erst danach kann der Auftrag selbst storniert werden.
+</div>
+<br/>
+
+<div className="background-container">
+    <CancellationWkzMmCarousel/>
+</div>
+<br/>
+
+
+
+## Stornierte Aufträge anzeigen
+<div className="background-container">
+    <ShowCancellationCarousel/>
+</div>
+<br/>
+
+
+## Stornierten Auftrag zurückholen
+<div className="background-container">
+    Es besteht die Möglichkeit einen Auftrag aus dem Storno-Bereich zurückzuholen. 
+    Allerdings funktioniert das nur, wenn die Material Family noch nicht abgeschlossen ist, bzw.
+    der Planer den Auftrag noch nicht storniert hat.
+</div>
+<br/>
+
+<div className="background-container">
+    <RetrieveCancellationCarousel/>
+</div>
+<br/>

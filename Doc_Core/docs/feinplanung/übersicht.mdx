@@ -1,0 +1,80 @@
+---
+sidebar_position: 1 
+title: "Übersicht"
+description: ""
+---
+
+
+
+## Allgemein
+<div className="background-container">
+Der Reiter Übersicht im Bereich der Feinplanung zeigt alle Workcenter (Arbeitsplätze/Maschinen) und die 
+Aufträge welche gerade auf ihnen gefertigt werden oder verplant sind, anhand eines Balkendiagramms.
+Zusätzlich werden noch einige Infos angezeigt, wie der Service-Faktor, Backlog und der Status des Auftrages.
+</div>
+<br/>
+
+<div className="background-container">
+    <OverviewCarousel/>
+</div>
+
+
+## Workcenter
+<div className="background-container">
+Ein Workcenter ist ein Bereich, der eine oder mehrere Maschinen umfasst. Ein klassisches Beispiel hierfür wäre etwa
+eine Außenringlinie. Diese besteht oft aus einer Schleifmaschine und ein oder zwei Finish-Maschinen.
+Das Workcenter ist hier die Außenringlinie, die eben die Schleif- und die Finish-Maschinen umfasst.<br/>
+<br/>
+Im Bereich der Übersicht werden der Servicefaktor, der Backlog in Stunden, die zugehörigen Maschinen, sowie die verplanten 
+Stunden auf diesen angezeigt.
+</div>
+<br/>
+
+<div className="background-container">
+    <WorkcenterCarousel/>
+</div>
+<br/>
+
+
+### Bestimmte Workcenter auswählen
+<div className="background-container">
+Es gibt die Möglichkeit, in der Übersicht nur ausgewählte Workcenter anzusehen. 
+Dies ist hilfreich, wenn ein Bereich der Feinplanung sehr viele Workcenter umfasst.
+</div>
+<br/>
+
+<div className="background-container">
+    <SelectWorkcenterCarousel/>
+</div>
+<br/>
+
+
+## Balkendiagramme
+<div className="background-container">
+Sobald ein Auftrag im Reiter Sequenz auf einer Maschine feinverplant wurde, wird dieser in der Übersicht als Balken angezeigt.
+Anhand der Farbe kann man sehen, welchen Status der Auftrag gerade hat. Läuft er gerade, wurde er nur feinverplant oder ist er pausiert.
+Die Zeitachse zeigt, wie lange die Maschine für den Auftrag, unter idealen Bedingungen, belegt ist.
+</div>
+<br/>
+
+<div className="background-container">
+    <BarChartCarousel/>
+</div>
+<br/>
+
+## Zoom
+<div className="background-container">
+Mit der Zoom-Funktion kann angezeigt werden, wie lange die Maschine zum aktuellen Stand feinverplant ist.
+Es ist möglich, die Feinplanung für die nächsten 11 Schichten anzuzeigen.
+</div>
+<br/>
+
+<div className="background-container">
+    <ZoomCarousel/>
+</div>
+<br/>
+
+
+
+
+

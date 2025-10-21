@@ -1,0 +1,83 @@
+---
+sidebar_position: 7
+title: Rückmeldung auf Volumenchannels
+description: ""
+---
+
+
+<div className="background-container">
+Die Rückmeldung auf Volumenchannels gibt es auch wieder mit und ohne Collo. 
+Auch Zeit- und Mengenerfassung sind gleich.
+Der Unterschied zu den normalen Rückmeldungen ist, dass der Auftrag hier auf mehrere Final Varianten (FV) aufgeteilt ist. 
+Wenn ein Auftrag etwa 1000 Stück umfasst kann er beispielsweise folgendermaßen aufgeteilt sein: <br/><br/>
+
+- FV 1: 300 Stk
+- FV 2: 500 Stk
+- FV 3: 200 Stk
+
+
+Jede FV muss dann auch einzeln abgeschlossen werden, genau so als ob man
+einen normalen Auftrag abschließen würde.
+</div>
+<br/>
+
+
+### Neue Rückmeldung ohne Verluste
+<div className="background-container">
+    Bei dieser Art der Rückmeldung werden nur die Arbeitszeit, das Datum und die produzierte Stückzahl erfasst. 
+    Die Maske, welche dir angezeigt wird, kann allerdings aus einer beliebigen Kombination aus Zeit, Datum und Stückzahl bestehen, 
+    abhängig vom jeweiligen Bereich.
+</div>
+<br/>
+
+<div className="background-container">
+    <VolumeNoLossCarousel/>
+</div>
+
+### Neue Rückmeldung mit Verlusten
+<div className="background-container">
+Bei dieser Art der Rückmeldung wird ebenfalls die Arbeitszeit, das Datum die produzierte Stückzahl erfasst. Weiters kommt nun auch die
+Verlusterfassung hinzu.
+Verlusterfassung bedeutet hier, dass im System eine bestimmte Zeit für den Auftrag hinterlegt ist. Wird diese Zeit nicht erreicht, 
+müssen die Gründe für das nicht Erreichen angegeben werden, wie etwa mangelnde Qualität beim Material, Werkzeugbruch, usw. 
+
+Die Maske, welche dir angezeigt wird, kann allerdings aus einer beliebigen Kombination aus Zeit, Datum und Stückzahl bestehen, 
+abhängig vom jeweiligen Bereich.
+<br/>
+Zusätzlich gibt es noch die drei Optionen, die Rückmeldung ohne Rüsten, mit Rüsten in vorgegebener Zeit 
+oder mit Rüsten außerhalb der vorgegebenen Zeit einzutragen. <br/>
+Wähle bitte zutreffendes aus:
+</div>
+<br/>
+
+<div className="background-container">
+    <Tabs className="unique-tabs">
+        <TabItem value="ohne Rüsten">
+            <VolumeLossNoEquipCarousel/>
+        </TabItem>
+        <TabItem value="mit Rüsten innerhalb Standardzeit">
+            <VolumeLossEquipInTimeCarousel/>
+        </TabItem>
+        <TabItem value="mit Rüsten außerhalb Standardzeit">
+            <VolumeLossEquipNotInTimeCarousel/>
+        </TabItem>
+    </Tabs>
+</div>
+
+### Rückmeldung löschen
+<div className="background-container">
+    <VolumeDeleteFeedbackCarousel/>
+</div>
+
+### Auftrag abschließen
+<div className="background-container">
+Das abschließen eines Auftrages erfolgt in der Regel durch den Mitarbeiter, der den letzten Eintrag macht, sprich die letzten Stücke fertigt.
+Um auf einem Volumenchannel einen Auftrag abschließen zu können, müssen alle Final Varianten abgeschlossen sein.<br/> <br/>
+
+Ein Auftrag muss in der Fertigung abgeschlossen sein, damit der Vorarbeiter ihn in seinem Bereich abschließen kann.
+</div>
+<br/>
+
+<div className="background-container">
+    <VolumeCloseAssignmentCarousel/>
+</div>
