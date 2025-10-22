@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/fontawesome-pro';
 import './loss-tree.css';
 import lossTreeJson from '../../files/loss-tree.json'; 
 
@@ -33,14 +32,14 @@ function TreeItem({ data, lossIds, setLossIds, checkboxState, setCheckboxState }
             <div>
                     {hasChildren && (collapsed ? (
                         <div onClick={toggleCollapsed} className='collapsed-list'>
-                            <FontAwesomeIcon icon="folder"/>
+                            O
                             <span  className='loss-item' loss_id={data.loss_id}>
                                 {' ' + data.loss_description_display}
                             </span>
                         </div>
                     ) : (
                         <div onClick={toggleCollapsed} className='uncollapsed-list'>
-                            <FontAwesomeIcon icon="folder-open"/>
+                            --
                             <span className='loss-item' loss_id={data.loss_id}>
                                 {' ' + data.loss_description_display}
                             </span>
@@ -94,7 +93,7 @@ function MailComponents({ lossIds }) {
     return (
         <button className="tooltip id-buttons button button--sm button--secondary" onClick={() => openMail({ lossIds })}>
             <span className='tooltiptext'>Mail mit IDs an <br/> christoph.lengauer@skf.com</span>
-            <FontAwesomeIcon icon="envelope" size="lg" />{' '}
+            Mail{' '}
         </button>
     );
 }
@@ -156,7 +155,7 @@ export default function LossTree() {
                             <div className="col-demo">
                                 <button onClick={() => navigator.clipboard.writeText(lossIds)} className="tooltip id-buttons button button--sm button--secondary">
                                     <span className='tooltiptext'>In Zwischenablage kopieren</span>
-                                    <FontAwesomeIcon icon="clipboard" size="lg" />{' '}
+                                    Copy{' '}
                                 </button>
                                 <MailComponents lossIds={lossIds}/>
                             </div>

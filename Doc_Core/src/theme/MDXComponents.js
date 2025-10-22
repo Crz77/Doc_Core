@@ -107,32 +107,9 @@ import {
     PprPrintCarousel
 } from '@site/src/components/Carousels/ppr/pprprint-carousels';
 
-import { FontAwesomeIcon } from '@fortawesome/fontawesome-pro'; 
-//import { faFolder, faFolderOpen, faEnvelope, faClipboard, faSquareE, faPlus } from '@fortawesome/fontawesome-pro';
-//import { library } from '@fortawesome/fontawesome-pro'; 
-
-/* import { fab } from '@fortawesome/free-brands-svg-icons';  
-import { fas } from '@fortawesome/pro-solid-svg-icons'; 
-import { fal } from '@fortawesome/pro-light-svg-icons'; 
-import { fad } from '@fortawesome/pro-duotone-svg-icons'; 
-import { far } from '@fortawesome/pro-regular-svg-icons'; 
-import { fat } from '@fortawesome/pro-thin-svg-icons'; 
-import { fasl } from '@fortawesome/sharp-light-svg-icons'; 
-import { fasr } from '@fortawesome/sharp-regular-svg-icons'; 
-import { fass } from '@fortawesome/sharp-solid-svg-icons';  */
-
-//library.add(
-    //fab, fas, fal, fad, far, fat, fasl, fasr, fass
-    //faFolder, faFolderOpen, faEnvelope, faClipboard, faSquareE, faPlus
-//); 
-
-
-
-
 export default {
   ...MDXComponents,
   LossTree,
-  FontAwesomeIcon,
   ImgCarousel,
   HiddenLink,
   Tabs,
